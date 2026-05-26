@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas 8° - I.E. Narciso Cabal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app-container">
+        <header class="welcome-header">
+            <img src="narciso.png" alt="Logo Colegio" class="logo-main">
+            <h1>Matemáticas 8°</h1>
+            <p>I.E. Narciso Cabal Salcedo</p>
+        </header>
+
+        <nav class="dashboard-grid">
+
+
+<a href="seleccion-actividades.html" class="dash-card card-blue">
+    <div class="icon">📝</div>
+    <h2>Actividades</h2>
+</a>
+
+<a href="seleccion-asistencia.html" class="dash-card card-yellow">
+    <div class="icon">📅</div>
+    <h2>Asistencia</h2>
+</a>
+
+            <a href="libros.html" class="dash-card card-purple">
+                <div class="icon">📚</div>
+                <h2>Mis Libros</h2>
+            </a>
+
+		<a href="seleccion-notas.html" class="dash-card card-green">
+   		 <div class="icon">📊</div>
+   		 <h2>Notas</h2>
+		</a>
+
+        </nav>
+
+        <footer class="status-bar">
+            <div id="offline-indicator" class="status-tag">
+                <span class="dot"></span> Disponible sin conexión
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+</body>
+</html>
