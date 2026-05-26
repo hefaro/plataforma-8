@@ -1,8 +1,5 @@
 const CATALOGO = [
-    { id: 'g8', titulo: 'Matemáticas 8°', filename: 'MT_Grado08_2012.pdf' },
-    { id: 'g9', titulo: 'Matemáticas 9°', filename: 'MT_Grado09_2012.pdf' },
-    { id: 'g3', titulo: 'Matemáticas 8° ESO', filename: 'Matemáticas 3 ESO Santillana 8.pdf' }
-
+    { id: 'g8', titulo: 'Matemáticas 8°', filename: 'MT_Grado08_2012.pdf' }
 ];
 
 let db;
