@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>BiblioKids - Narciso Cabal</title>
+    <link rel="stylesheet" href="libros.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        window.pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+</head>
+<body>
+    <header>
+        <img src="narciso.png" alt="Logo Colegio" style="height: 60px;">
+        <h1>Mi Biblioteca 📚</h1>
+    </header>
+
+    <div class="section-title">📂 Mis Libros Guardados (Offline)</div>
+    <main id="my-library-grid" class="pdf-grid">
+        <p id="empty-message">No hay libros descargados.</p>
+    </main>
+
+    <div class="section-title">⬇️ Libros para Descargar</div>
+    <main id="catalog-grid" class="pdf-grid"></main>
+
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="pdf-controls">
+                <span id="closeModal" class="close-button">❌ Salir</span>
+                <div class="zoom-group">
+                    <button id="zoomOut">➖</button>
+                    <button id="zoomIn">➕</button>
+                </div>
+            </div>
+            <div id="viewerContainer" class="viewer-container">
+                <div id="pdfViewer" class="pdfViewer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="libros.js"></script>
+    <script>
+        // REGISTRO DEL SERVICE WORKER: Esto es lo que permite que funcione sin internet
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker activo', reg))
+                    .catch(err => console.error('Error en SW', err));
+            });
+        }
+    </script>
+</body>
+</html>
