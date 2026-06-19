@@ -6,6 +6,29 @@
     <title>Matemáticas 8° - I.E. Narciso Cabal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <style>
+        /* Estilo sutil para el enlace del manual */
+        .manual-link {
+            color: #5f6368;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+        .manual-link:hover {
+            color: #202124;
+            text-decoration: underline;
+        }
+        /* Ajuste para separar los elementos en el footer si tu CSS usa flexbox */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="app-container">
@@ -17,26 +40,25 @@
 
         <nav class="dashboard-grid">
 
+            <a href="seleccion-actividades.html" class="dash-card card-blue">
+                <div class="icon">📝</div>
+                <h2>Actividades</h2>
+            </a>
 
-<a href="seleccion-actividades.html" class="dash-card card-blue">
-    <div class="icon">📝</div>
-    <h2>Actividades</h2>
-</a>
+            <a href="seleccion-asistencia.html" class="dash-card card-yellow">
+                <div class="icon">📅</div>
+                <h2>Asistencia</h2>
+            </a>
 
-<a href="seleccion-asistencia.html" class="dash-card card-yellow">
-    <div class="icon">📅</div>
-    <h2>Asistencia</h2>
-</a>
-
-            <a href="Libros.html" class="dash-card card-purple">
+            <a href="libros.html" class="dash-card card-purple">
                 <div class="icon">📚</div>
                 <h2>Mis Libros</h2>
             </a>
 
-		<a href="seleccion-notas.html" class="dash-card card-green">
-   		 <div class="icon">📊</div>
-   		 <h2>Notas</h2>
-		</a>
+            <a href="seleccion-notas.html" class="dash-card card-green">
+                <div class="icon">📊</div>
+                <h2>Notas</h2>
+            </a>
 
         </nav>
 
@@ -44,6 +66,9 @@
             <div id="offline-indicator" class="status-tag">
                 <span class="dot"></span> Disponible sin conexión
             </div>
+            <a href="guia-usuario.html" class="manual-link" title="Ver manual de ayuda">
+                📖 Manual de Usuario
+            </a>
         </footer>
     </div>
 

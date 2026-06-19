@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - Plataforma de Matemáticas</title>
+    <style>
+        :root {
+            --primary: #4285F4;
+            --success: #34A853;
+            --warning: #FBBC04;
+            --danger: #EA4335;
+            --purple: #673AB7;
+            --orange: #FF5722; /* Nuevo color para el horario */
+            --dark: #202124;
+            --light: #f8f9fa;
+            --gray: #5f6368;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo-placeholder {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+        }
+
+        h2 {
+            color: var(--dark);
+            border-left: 5px solid var(--primary);
+            padding-left: 10px;
+            margin-top: 30px;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        .grid-explicativo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .card-demo {
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .card-demo:hover {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+
+        .blue { background-color: var(--primary); }
+        .yellow { background-color: var(--warning); color: #333; }
+        .purple { background-color: var(--purple); }
+        .green { background-color: var(--success); }
+        .orange { background-color: var(--orange); } /* Estilo naranja */
+
+        .btn-inline {
+            display: inline-block;
+            background-color: var(--orange);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        blockquote {
+            background-color: #e8f0fe;
+            border-left: 5px solid var(--primary);
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        .badge-offline {
+            display: inline-block;
+            background: #e6f4ea;
+            color: var(--success);
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid #ceead6;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray);
+            border-top: 1px solid #dadce0;
+            padding-top: 20px;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .guide-container { box-shadow: none; padding: 0; }
+            .card-demo { border: 1px solid #000; color: #000 !important; background: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="guide-container">
+        <header>
+            <div class="logo-placeholder">📚</div>
+            <h1>Manual de Uso de tu Plataforma Matemática</h1>
+            <p><strong>I.E. Narciso Cabal Salcedo</strong> — Cursos de 8° y 9° Grado</p>
+        </header>
+
+        <p>¡Te damos la bienvenida a tu centro de control matemático! Esta plataforma web está diseñada para que consultes tus notas, registres tu asistencia, repases los talleres de clase y leas tus libros asignados, <strong>¡incluso si te quedas sin conexión a Internet!</strong></p>
+
+        <h2>🧭 1. El Menú Principal (Panel de Control)</h2>
+        <p>Al ingresar a la aplicación, encontrarás una pantalla de bienvenida con botones de colores. Cada uno te llevará a una sección diferente del curso. Puedes hacer clic directamente sobre ellos en este manual para abrir los enlaces:</p>
+        
+        <div class="grid-explicativo">
+            <div class="card-demo blue">📝 Actividades</div>
+            <div class="card-demo yellow">📅 Asistencia</div>
+            <div class="card-demo purple">📚 Mis Libros</div>
+            <div class="card-demo green">📊 Notas</div>
+            <a href="https://hefaro.github.io/Horario-de-clase/" target="_blank" class="card-demo orange">⏰ Mi Horario</a>
+        </div>
+
+        <blockquote>
+            <span class="badge-offline">🟢 Disponible sin conexión</span><br>
+            Si ves este indicador en la parte inferior de la pantalla, significa que la aplicación ya guardó los datos esenciales en tu dispositivo. Puedes volver a abrir la página principal y acceder a tus herramientas básicas aunque no tengas datos o Wi-Fi.
+        </blockquote>
+
+        <h2>📝 2. ¿Cómo acceder a tus Talleres y Actividades?</h2>
+        <p>Cuando entres a la sección de <strong>Actividades</strong>, verás el conocimiento organizado en tres materias básicas. Presiona la que necesites revisar:</p>
+        <ul>
+            <li><strong>Talleres: Álgebra (Botón Azul):</strong> Presiónalo para abrir las guías de ecuaciones, polinomios y ejercicios teóricos.</li>
+            <li><strong>Talleres: Geometría (Botón Rojo):</strong> Úsalo para acceder a las plantillas de dibujo, construcciones geométricas y polígonos.</li>
+            <li><strong>Talleres: Estadística (Botón Amarillo):</strong> Púlsalo para explorar los talleres de recolección de datos y análisis gráfico.</li>
+        </ul>
+        <p><em>Al tocar cualquiera de los botones, la plataforma te redirigirá de manera segura a una carpeta de Google Drive donde podrás ver, descargar o imprimir las actividades asignadas.</em></p>
+
+        <h2>📅 3. Control de Asistencia</h2>
+        <p>Al presionar el botón amarillo de <strong>Asistencia</strong>, el sistema abrirá de forma automática el lector oficial de registros de la asignatura.</p>
+        <ul>
+            <li><strong>¿Qué debes hacer aquí?</strong> Revisa periódicamente que tus días de asistencia presencial estén correctamente contabilizados y reportados en el sistema interactivo.</li>
+        </ul>
+
+        <h2>📚 4. Tu Biblioteca Digital Privada ("Mis Libros")</h2>
+        <p>Esta sección te permite almacenar libros de lectura directamente en tu celular o computadora para estudiar en lugares sin conectividad. Funciona en dos partes:</p>
+        
+        <h3>A. Libros para Descargar</h3>
+        <p>Explora el catálogo que aparece en la parte inferior de la pantalla cuando tengas internet (ya sea en el colegio o en una zona con Wi-Fi). Elige el libro que necesites y presiona el botón de descarga.</p>
+        
+        <h3>B. Mis Libros Guardados (Uso Offline)</h3>
+        <p>Una vez descargado, el libro se moverá automáticamente a tu estante superior de lecturas guardadas. A partir de ese momento, podrás abrirlo y leer el PDF completo sin gastar tus datos móviles.</p>
+        
+        <h3>🎛️ Controles del Visor de Lectura:</h3>
+        <p>Cuando abras un libro en la pantalla, utiliza las siguientes herramientas interactivas para una lectura cómoda:</p>
+        <ul>
+            <li>Usa el botón <strong>➕</strong> para acercar la página si la letra te parece muy pequeña.</li>
+            <li>Usa el botón <strong>➖</strong> para alejar la vista y encuadrar la página completa.</li>
+            <li>Presiona el botón <strong>❌ Salir</strong> cuando termines de estudiar para volver a tu biblioteca.</li>
+        </ul>
+
+        <h2>📊 5. Seguimiento de Calificaciones (Notas)</h2>
+        <p>Mantén el control diario de tus entregas y notas para asegurar tu año escolar. El menú te dividirá las planillas en tres accesos rápidos:</p>
+        <ol>
+            <li><strong>Notas Físicas:</strong> Abre tu registro acumulado de las evaluaciones, quices y talleres que entregaste en hojas físicas dentro del salón.</li>
+            <li><strong>Virtuales: Álgebra:</strong> Te muestra el estado y la calificación de las tareas digitales asignadas en esta materia.</li>
+            <li><strong>Virtuales: Estadística:</strong> Despliega la hoja de seguimiento para tus proyectos y consultas estadísticas en línea.</li>
+        </ol>
+
+        <h2>⏰ 6. Horario de Clase</h2>
+        <p>Para evitar confusiones con las jornadas y asignaturas, cuentas con un módulo exclusivo para revisar tu distribución horaria de la semana de manera interactiva.</p>
+
+            <p><strong>Apreciado acudiente si tiene alguna duda acerquese al colegio en los horarios asignados y solicite asesoria.</li>
+        </p>
+
+        <ul>
+            <li>Puedes acceder directamente desde este manual tocando el botón naranja en el menú superior o dando clic en el siguiente enlace directo: <a href="https://hefaro.github.io/Horario-de-clase/" target="_blank" class="btn-inline">Ver mi Horario ⏰</a></li>
+        </ul>
+
+        <h2>💡 Consejos Prácticos para el Éxito</h2>
+        <ul>
+            <li><strong>Instala la app en tu pantalla:</strong> En tu navegador del celular, selecciona la opción "Añadir a la pantalla de inicio". Así tendrás un acceso directo como cualquier otra aplicación, facilitando su uso sin internet.</li>
+            <li><strong>Descarga con anticipación:</strong> Aprovecha el Wi-Fi del colegio o de un conocido para descargar tus guías y libros. Así podrás hacer las tareas en casa sin interrupciones.</li>
+            <li><strong>Haz seguimiento a tus notas:</strong> Revisa tus casillas vacías o notas bajas cada semana. No dejes las correcciones para el último día del periodo.</li>
+        </ul>
+
+        <footer>
+            <p>Institución Educativa Narciso Cabal Salcedo — ¡La tecnología al servicio del aprendizaje constructivo!</p>
+        </footer>
+    </div>
+
+</body>
+</html>
