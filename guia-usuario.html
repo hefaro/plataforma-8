@@ -11,7 +11,8 @@
             --warning: #FBBC04;
             --danger: #EA4335;
             --purple: #673AB7;
-            --orange: #FF5722; /* Nuevo color para el horario */
+            --orange: #FF5722;
+            --teal: #009688;
             --dark: #202124;
             --light: #f8f9fa;
             --gray: #5f6368;
@@ -99,7 +100,8 @@
         .yellow { background-color: var(--warning); color: #333; }
         .purple { background-color: var(--purple); }
         .green { background-color: var(--success); }
-        .orange { background-color: var(--orange); } /* Estilo naranja */
+        .orange { background-color: var(--orange); }
+        .teal { background-color: var(--teal); }
 
         .btn-inline {
             display: inline-block;
@@ -110,6 +112,52 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9rem;
+        }
+
+        .qr-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--light);
+            border: 1px solid #dadce0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .qr-card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 200px;
+            margin-bottom: 15px;
+        }
+
+        .qr-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .qr-url-box {
+            background-color: #f1f3f4;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: var(--dark);
+            word-break: break-all;
+            margin-top: 10px;
         }
 
         ul, ol {
@@ -153,6 +201,7 @@
             body { background: white; padding: 0; }
             .guide-container { box-shadow: none; padding: 0; }
             .card-demo { border: 1px solid #000; color: #000 !important; background: none !important; }
+            .qr-section { border: 1px solid #000; background: none; }
         }
     </style>
 </head>
@@ -176,6 +225,7 @@
             <div class="card-demo purple">📚 Mis Libros</div>
             <div class="card-demo green">📊 Notas</div>
             <a href="https://hefaro.github.io/Horario-de-clase/" target="_blank" class="card-demo orange">⏰ Mi Horario</a>
+            <a href="#compartir-qr" class="card-demo teal">📱 Compartir QR</a>
         </div>
 
         <blockquote>
@@ -226,12 +276,36 @@
         <h2>⏰ 6. Horario de Clase</h2>
         <p>Para evitar confusiones con las jornadas y asignaturas, cuentas con un módulo exclusivo para revisar tu distribución horaria de la semana de manera interactiva.</p>
 
-            <p><strong>Apreciado acudiente si tiene alguna duda acerquese al colegio en los horarios asignados y solicite asesoria.</li>
-        </p>
+        <p><strong>Apreciado acudiente:</strong> si tiene alguna duda, acérquese al colegio en los horarios asignados y solicite asesoría.</p>
 
         <ul>
             <li>Puedes acceder directamente desde este manual tocando el botón naranja en el menú superior o dando clic en el siguiente enlace directo: <a href="https://hefaro.github.io/Horario-de-clase/" target="_blank" class="btn-inline">Ver mi Horario ⏰</a></li>
         </ul>
+
+        <h2 id="compartir-qr">📲 7. Compartir las Plataformas (Códigos QR)</h2>
+        <p>Puedes compartir el acceso rápido a la plataforma correspondiente según el grado del estudiante escaneando el código QR con la cámara de cualquier celular o tablet.</p>
+
+        <div class="qr-wrapper">
+            <!-- QR Grado Octavo -->
+            <div class="qr-section">
+                <h3>Plataforma de 8° Grado</h3>
+                <div class="qr-card">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://hefaro.github.io/plataforma-8/" alt="Código QR de la Plataforma 8" loading="lazy">
+                </div>
+                <p><strong>Escanea para acceder a 8°</strong></p>
+                <div class="qr-url-box">https://hefaro.github.io/plataforma-8/</div>
+            </div>
+
+            <!-- QR Grado Noveno -->
+            <div class="qr-section">
+                <h3>Plataforma de 9° Grado</h3>
+                <div class="qr-card">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://hefaro.github.io/plataforma-9/" alt="Código QR de la Plataforma 9" loading="lazy">
+                </div>
+                <p><strong>Escanea para acceder a 9°</strong></p>
+                <div class="qr-url-box">https://hefaro.github.io/plataforma-9/</div>
+            </div>
+        </div>
 
         <h2>💡 Consejos Prácticos para el Éxito</h2>
         <ul>
